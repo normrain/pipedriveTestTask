@@ -1,0 +1,16 @@
+{
+    "pipedriveBaseUrl": "<Pipedrive Company Domain>",
+    "githubBaseUrl": "api.github.com",
+    "githubToken": "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",
+    "pipedriveToken": "<Pipedrive Token>",
+    "users": [
+        {
+            "name": "normrain",
+            "lastVisit": ""
+        },
+        {
+            "name": "<testuser2>",
+            "lastVisit":""
+        }
+    ]
+}
