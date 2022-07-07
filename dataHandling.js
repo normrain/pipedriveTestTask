@@ -152,6 +152,36 @@ export function preparePipedriveData(json) {
 
 }
 
+/*
+*Function that links all parts together and goes through the workflow of fetching gists and creating activities
+*Parameters are the config, the users and the lastRun, which are the parameters the GET to Github needs to get started
+*No return 
+*/
+export async function runJob(config, users, lastRun){
+    if (users.length > 0) {
 
+        //Fetching the Github gists and waiting for the results
+        const githubGists = await getGithubData(config, users, lastRun)
 
+        //If the result of the GET is empty (i.e. no new gists have been created) this will be logged and no further action will be taken until the next cycle
+        if (countArray(githubGists) > 0) {
 
+            //Gists are saved to a file in case they need to be used later
+            writeData(JSON.stringify(githubGists))
+
+            //The gists are posted to Pipedrive
+            const postedData = await postPipedrive(config, githubGists);
+
+            //Only if the POST is successful, is lastRun updated. If the POST fails, lastRun remains the same, and basically the same GET + POST operation is carried out
+            if (postedData.length > 0) {
+                lastRun = timestamp();
+            } else {
+                console.log(`${timestamp()} [WARN] POST to Pipedrive failed. Retry in next cycle. Current last successful run: ${lastRun}`)
+            }
+        } else {
+            console.log(`${timestamp()} [INFO] No new gists have been created since last run. Nothing will be sent to Pipedrive`)
+        }
+    } else {
+        console.log(`${timestamp()} [WARN] No users are currently tracked. Add them to the config file`)
+    }
+}
