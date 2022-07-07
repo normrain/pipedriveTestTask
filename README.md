@@ -68,6 +68,6 @@ The users that are tracked are currently in the config file, and no endpoint was
 
 The cronjob is hardcoded to run every 15 minutes. This amount of time seems to be good to see the functionality of the app while also being able to create gists in between runs to be able to test it properly.
 
-
+The endpoints and routes were created using express, however, as only two actual endpoints were created no Express router was used
 
 
