@@ -37,8 +37,9 @@ The exact version numbers of the dependencies are:
 
 To run the file, clone the repository or download the files in a zip file and extract them to a directory.
 
-In the node.js command prompt navigate to the directory and enter **node main.js**
-If the require package have not been installed, running **npm install** should install all required packages and dependencies
+In the node.js command prompt navigate to the directory and enter **npm install**. This installs all required packages & dependencies to run.
+
+Afterwards, still in the same directory, enter **node main.js** to run the app.
 
 ### Setup
 Before the app can be run correctly, navigate to the "config.json" file, and enter your Pipedrive company domain, Pipedrive API toke, Github token, and the users that should be scanned.
