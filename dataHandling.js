@@ -13,7 +13,7 @@ export async function postPipedrive(config, data) {
 
     //used as the return value
     const responseArray = [];
-    const url = `https://${config.pipedriveBaseUrl}.pipdrive.com/v1/activities?api_token=${config.pipedriveToken}`;
+    const url = `${config.pipedriveBaseUrl}/v1/activities?api_token=${config.pipedriveToken}`;
 
     //For every entry in the prepared data, an individual POST call is made to Pipedrive and the activity is created
     for (const entry of postData) {
@@ -55,7 +55,7 @@ export async function getGithubData(config, users, lastRun) {
 
     //Separate GET calls are made for every users that is being scanned
     for (const user of users) {
-        let url = `https://${config.githubBaseUrl}/users/${user.name}/gists`;
+        let url = `${config.githubBaseUrl}/users/${user.name}/gists`;
 
         //lastRun is initialised as "never"
         if (lastRun !== "never") {
@@ -98,7 +98,7 @@ export async function getGithubData(config, users, lastRun) {
 */
 
 export async function getGithubDataforUser(config, user) {
-    let url = `https://${config.githubBaseUrl}/users/${user.name}/gists`;
+    let url = `${config.githubBaseUrl}/users/${user.name}/gists`;
 
     //user.lastVisit is a property defined in the config file, and it is initially empty
     if (user.lastVisit) {
@@ -185,3 +185,6 @@ export async function runJob(config, users, lastRun){
         console.log(`${timestamp()} [WARN] No users are currently tracked. Add them to the config file`)
     }
 }
+
+
+
