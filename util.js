@@ -42,5 +42,3 @@ export const countArray = array => array.flat().length;
 
 //Used for console logs in the Fetch API
 export const fetchLogger = (response, mode) => `${timestamp()} [${mode}] HTTP ${response.status} ${response.statusText} ---`;
-
-
