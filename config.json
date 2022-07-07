@@ -1,7 +1,7 @@
 {
     "pipedriveBaseUrl": "<Pipedrive Company Domain>",
     "githubBaseUrl": "api.github.com",
-    "githubToken": "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",
+    "githubToken": "<Github Token>",
     "pipedriveToken": "<Pipedrive Token>",
     "users": [
         {
