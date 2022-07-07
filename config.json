@@ -1,15 +1,15 @@
 {
-    "pipedriveBaseUrl": "<Pipedrive Company Domain>",
-    "githubBaseUrl": "api.github.com",
-    "githubToken": "<Github Token>",
-    "pipedriveToken": "<Pipedrive Token>",
+    "pipedriveBaseUrl": "https://{company domain}.pipedrive.com/",
+    "githubBaseUrl": "https://api.github.com",
+    "githubToken": "{Github Token}",
+    "pipedriveToken": "{Pipedrive Token}",
     "users": [
         {
             "name": "normrain",
             "lastVisit": ""
         },
         {
-            "name": "<testuser2>",
+            "name": "{testuser2}",
             "lastVisit":""
         }
     ]
