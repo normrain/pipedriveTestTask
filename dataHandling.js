@@ -1,5 +1,5 @@
 import _fetch from 'node-fetch';
-import { countArray, fetchLogger, timestamp } from './util.js';
+import { countArray, fetchLogger, timestamp, writeData } from './util.js';
 
 /*
 * Function to post data to Pipedrive and create the activities
