@@ -1,6 +1,4 @@
-# pipedriveTestTask
-
-## Assignment
+#Assignment
 ### Github API & Pipedrive API
 
 Using the Github API you should be able to query a user's publicly available github gists and create a deal/activity in Pipedrive for each gist. Implement an application that periodically checks for a user's publicly available gists, this application should also have a web endpoint where it should show the gists for that user that were added since the last visit.
