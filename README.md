@@ -1,14 +1,3 @@
-#Assignment
-
-
-Using the Github API you should be able to query a user's publicly available github gists and create a deal/activity in Pipedrive for each gist. Implement an application that periodically checks for a user's publicly available gists, this application should also have a web endpoint where it should show the gists for that user that were added since the last visit.
-
-* You can use any programming language you want
-* No need to get crazy with HTML/CSS or JSON apis, a simple text response will suffice
-* Document your assumptions based on your understanding of the problem and justify your decisions
-* Make sure your application should provide Good output, clear logging and as clear as possible about what its doing
-* README file with clear instructions on how to run the application on our local computers
-* Implement an endpoint that show all users that are been scanned.
 
 ## Installation
 
